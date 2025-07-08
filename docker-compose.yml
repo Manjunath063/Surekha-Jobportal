@@ -5,7 +5,7 @@ services:
     build: ./Backend
     container_name: jobportal-backend
     ports:
-      - "3010:3010"
+      - "3606:3606"
     depends_on:
       - postgres
     environment:
@@ -20,7 +20,7 @@ services:
     build: ./browsing-jobs
     container_name: jobportal-browsing
     ports:
-      - "9083:80"
+      - "8611:80"
     depends_on:
       - backend
 
@@ -28,7 +28,7 @@ services:
     build: ./hr-side-posting
     container_name: jobportal-hr
     ports:
-      - "9084:80"
+      - "8612:80"
     depends_on:
       - backend
 
@@ -36,7 +36,7 @@ services:
     image: postgres:13
     container_name: jobportal-postgres
     ports:
-      - "5407:5432"
+      - "5606:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
