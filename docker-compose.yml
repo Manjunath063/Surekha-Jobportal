@@ -9,7 +9,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - PORT=3010
+      - PORT=3606
       - DB_USER=postgres
       - DB_PASSWORD=admin123
       - DB_HOST=postgres
